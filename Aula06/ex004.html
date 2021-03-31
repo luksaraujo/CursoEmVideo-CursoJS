@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = prompt('Qual é o seu nome?') //Cria um prompt que pergunta o nome da pessoa e salva a resposta na variável "nome"
+        document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras.</br>`) //Escreve no documento (na página HTML) a frase e diz o tamanho da variável "nome" e usa a tag </br> para pular uma linha
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.`) //Converte o que foi escrito para letras maiúsculas e mostra na tela
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu primeiro programa JS</title>
+        <style>
+            body {
+                background-color: rgb(105, 105, 173);
+                color: white;
+                font: normal 20pt Arial;
+            }
+            
+            h1{
+                color: rgb(252, 212, 22);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Olá, mundo!</h1>
+        <p>Me livrei da maldição!</p>
+        <script>
+
+            //(number + number) = Adição
+            //(String + String) = Concatenação
+            //O window.prompt sempre retorna o valor digitado dentro dele com o formato string, mesmo que seja um número ou um valor boolean
+
+            var n1 = Number.parseFloat(prompt('Digite um número: ')) //Pede ao usuário pra digitar um número e já salva ele como uma variável de tipo número real/flutuante
+            var n2 = Number(prompt('Digite outro número: ')) //Pede ao usuário pra digitar outro número e já identifica que um número vai ser inserido, mas sem especificar de qual tipo
+            var soma = n1 + n2 //Soma os valores das variáveis
+            //alert('A soma dos valores é ' + soma) //Exibe a mensagem entre apóstrofes junto com o resultado da soma com o método de concatenação
+            
+            alert(`A soma dos valores é ${soma}`) 
+            /* ATENÇÃO
+            O comando acima exibe a mensagem entre apóstrofes junto com o resultado da soma com o método de placeholder.
+            PARA QUE ELE FUNCIONE, a string tem, obrigatoriamente, que estar entre crases.*/
+
+        </script>
+    </body>
+</html>
