@@ -8,14 +8,12 @@
 </head>
 <body>
     <script>
-        var n1 = null //Cria a variável n1 com o valor nulo
-        n1 = 1545.5 //Insere "1545,5" dentro da variável n1
-        n1.toFixed(2).replace('.', ',') //Define que a variável n1 terá duas casas decimais e substitui o ponto por vírgula
-        /* O comando abaixo define que a variável n1 pertence ao local Brasil, 
-        que o estilo dela é monetário (currency) e que a moeda que ela representa
-        é o real brasileiro.*/
-        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) //Descrição no comentário acima
-        document.write(`Valor: ${n1}`) //Mostra a variável n1
+        var n1 = 1545.5 //Insere "1545,5" dentro da variável n1
+        var n2 = n1.toFixed(2).replace('.', ',')
+        document.write(`Valor: ${n2.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`) 
+        /*Mostra a variável n1, define que a ela terá duas casas decimais e substitui o ponto por vírgula e
+         define que a variável n1 pertence ao local Brasil, que o estilo dela é monetário (currency) e 
+         que a moeda que ela representa é o real brasileiro.*/
     </script>
 </body>
 </html>
