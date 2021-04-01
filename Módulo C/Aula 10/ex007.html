@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area'); //Define que a variável 'a' será o elemente cujo ID é 'area'
+
+        a.addEventListener('click', clicar) //Cria um método que espiona se o trigger 'click' foi disparado na variável 'a' e chama a função 'clicar' se isso acontecer
+        a.addEventListener('mouseenter', entrar) //Cria um método que espiona se o trigger 'mouseenter' foi disparado na variável 'a' e chama a função 'entrar' se isso acontecer
+        a.addEventListener('mouseout', sair) //Cria um método que espiona se o trigger 'mouseout' foi disparado na variável 'a' e chama a função 'sair' se isso acontecer
+
+        function clicar() { //Cria a função 'clicar'
+            a.innerText = 'Clicou!' //muda o texto da variável 'a' para 'Clicou!' quando a função é executada
+            a.style.background = 'red' //Muda a cor de fundo da variável 'a' para vermelho
+        }
+
+        function entrar(){ //Cria a função 'entrar'
+            a.innerText = 'Entrou!' //muda o texto da variável 'a' para 'Entrou!' quando a função é executada
+        }
+
+        function sair(){ //Cria a função 'sair'
+            a.innerText = 'Saiu!' //muda o texto da variável 'a' para 'Saiu!' quando a função é executada
+            a.style.background = 'green' //Muda a cor de fundo da variável 'a' para verde
+       }
+
+    </script>
+</body>
+</html>
