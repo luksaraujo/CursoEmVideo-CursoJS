@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Nacionalidade</title>
+    <style>
+        div#nacionalidade{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Identificador de Nacionalidades</h1>
+    <p>Digite abaixo a sua nacionalidade</p>
+    <input type="text" name="txtNacionalidade" id="txtNacionalidade">
+    <input type="button" value="Validar" onclick="checar()">
+    <div id="nacionalidade"></div>
+
+    <script>
+        function checar(){
+            var txtNacionalidade = window.document.querySelector('input#txtNacionalidade')
+            var resultado = window.document.querySelector('div#nacionalidade')
+            var nacionalidade = txtNacionalidade.value
+            if (nacionalidade == 'Brasileiro' || nacionalidade == 'brasileiro') {
+                resultado.innerHTML = `<p>Você é ${nacionalidade}.</p>`
+            } else {
+                resultado.innerHTML = `<p>Você é ${nacionalidade}. Logo, você é estrangeiro(a).</p>`
+            }
+        }
+    </script>
+</body>
+</html>
